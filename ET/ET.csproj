@@ -1,0 +1,2088 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{62E5275C-7DEB-4283-BB4A-237CAC89D634}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ET</RootNamespace>
+    <AssemblyName>ET</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>pic\80percent.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ET.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExitExcel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ExitExcel.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport, Version=2023.1.8.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\FastReport.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Bars, Version=2023.1.8.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\FastReport.Bars.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Editor, Version=2023.1.8.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\FastReport.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="iconits, Version=1.0.2290.18996, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ETsync\ET\bin\Debug\iconits.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.WinForms.10.0.40219.1\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PersianDate, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\PersianDate.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SautinSoft.PdfFocus, Version=5.5.12.17, Culture=neutral, PublicKeyToken=0b79b934109b3e9e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\SautinSoft.PdfFocus.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2019.3.917.40\Telerik.WinControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2019.3.917.40\Telerik.WinControls.GridView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.PdfViewer, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2019.3.917.40\Telerik.WinControls.PdfViewer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadDock, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2019.3.917.40\Telerik.WinControls.RadDock.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2010Blue, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2019.3.917.40\Telerik.WinControls.Themes.Office2010Blue.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2019.3.917.40\Telerik.WinControls.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2019.3.903.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2019.3.917.40\Telerik.Windows.Documents.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Fixed, Version=2019.3.903.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2019.3.917.40\Telerik.Windows.Documents.Fixed.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip, Version=2019.3.903.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2019.3.917.40\Telerik.Windows.Zip.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2019.3.917.40\TelerikCommon.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikData, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2019.3.917.40\TelerikData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Anbar\ClsAnbar.cs" />
+    <Compile Include="Anbar\FrmAnbar_GroupKalaKala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Anbar\FrmAnbar_GroupKalaKala.Designer.cs">
+      <DependentUpon>FrmAnbar_GroupKalaKala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Anbar\FrmAnbar_RosoobKala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Anbar\FrmAnbar_RosoobKala.Designer.cs">
+      <DependentUpon>FrmAnbar_RosoobKala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Anbar\FrmHavaleAnbar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Anbar\FrmHavaleAnbar.Designer.cs">
+      <DependentUpon>FrmHavaleAnbar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Anbar\FrmKala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Anbar\FrmKala.designer.cs">
+      <DependentUpon>FrmKala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Anbar\FrmZamanDarRah.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Anbar\FrmZamanDarRah.Designer.cs">
+      <DependentUpon>FrmZamanDarRah.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Anbar\FrmZAnbar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Anbar\FrmZAnbar.Designer.cs">
+      <DependentUpon>FrmZAnbar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buy\ClsBuy.cs" />
+    <Compile Include="Buy\FrmBuy_Barname.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buy\FrmBuy_Barname.designer.cs">
+      <DependentUpon>FrmBuy_Barname.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buy\FrmBuy_BarnameSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buy\FrmBuy_BarnameSearch.Designer.cs">
+      <DependentUpon>FrmBuy_BarnameSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buy\FrmBuy_DarkhastSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buy\FrmBuy_DarkhastSearch.Designer.cs">
+      <DependentUpon>FrmBuy_DarkhastSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buy\FrmBuy_Ersal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buy\FrmBuy_Ersal.Designer.cs">
+      <DependentUpon>FrmBuy_Ersal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buy\FrmBuy_Eslah.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buy\FrmBuy_Eslah.Designer.cs">
+      <DependentUpon>FrmBuy_Eslah.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buy\FrmBuy_Part.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buy\FrmBuy_Part.designer.cs">
+      <DependentUpon>FrmBuy_Part.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buy\FrmBuy_Peymankar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buy\FrmBuy_Peymankar.Designer.cs">
+      <DependentUpon>FrmBuy_Peymankar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buy\FrmBuy_Pish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buy\FrmBuy_Pish.Designer.cs">
+      <DependentUpon>FrmBuy_Pish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buy\FrmBuy_RepAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buy\FrmBuy_RepAll.designer.cs">
+      <DependentUpon>FrmBuy_RepAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buy\FrmBuy_RepPish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buy\FrmBuy_RepPish.designer.cs">
+      <DependentUpon>FrmBuy_RepPish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buy\FrmBuy_Taeed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buy\FrmBuy_Taeed.Designer.cs">
+      <DependentUpon>FrmBuy_Taeed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buy\FrmBuy_TaeedReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buy\FrmBuy_TaeedReturn.Designer.cs">
+      <DependentUpon>FrmBuy_TaeedReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buy\FrmCostPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buy\FrmCostPrice.Designer.cs">
+      <DependentUpon>FrmCostPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buy\FrmBuy_Bestankaran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buy\FrmBuy_Bestankaran.Designer.cs">
+      <DependentUpon>FrmBuy_Bestankaran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClsBI.cs" />
+    <Compile Include="ClsConnect.cs" />
+    <Compile Include="ClsDA.cs" />
+    <Compile Include="FLW\ClsFlw.cs" />
+    <Compile Include="CRM\Cls_Customer.cs" />
+    <Compile Include="CRM\Frm_add_kala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\Frm_add_kala.Designer.cs">
+      <DependentUpon>Frm_add_kala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\Frm_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\Frm_Customer.designer.cs">
+      <DependentUpon>Frm_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\Frm_Customer_adjoint_work.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\Frm_Customer_adjoint_work.designer.cs">
+      <DependentUpon>Frm_Customer_adjoint_work.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\Frm_Customer_title.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\Frm_Customer_title.designer.cs">
+      <DependentUpon>Frm_Customer_title.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\Frm_H_Exbition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\Frm_H_Exbition.Designer.cs">
+      <DependentUpon>Frm_H_Exbition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\frm_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\frm_report.Designer.cs">
+      <DependentUpon>frm_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edari\ClsEdari.cs" />
+    <Compile Include="Edari\FrmEdari_AddPersonelPemankar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edari\FrmEdari_AddPersonelPemankar.Designer.cs">
+      <DependentUpon>FrmEdari_AddPersonelPemankar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edari\FrmEdari_ListPersonel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edari\FrmEdari_ListPersonel.Designer.cs">
+      <DependentUpon>FrmEdari_ListPersonel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edari\FrmEdari_Madakto2Pw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edari\FrmEdari_Madakto2Pw.Designer.cs">
+      <DependentUpon>FrmEdari_Madakto2Pw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edari\FrmEdari_Gharardad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edari\FrmEdari_Gharardad.Designer.cs">
+      <DependentUpon>FrmEdari_Gharardad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edari\FrmEdari_RepPersonel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edari\FrmEdari_RepPersonel.Designer.cs">
+      <DependentUpon>FrmEdari_RepPersonel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edari\FrmEdari_ReportEnterExit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edari\FrmEdari_ReportEnterExit.Designer.cs">
+      <DependentUpon>FrmEdari_ReportEnterExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edari\FrmEnterExit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edari\FrmEnterExit.Designer.cs">
+      <DependentUpon>FrmEnterExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLW\FrmFLW_MyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLW\FrmFLW_MyForm.Designer.cs">
+      <DependentUpon>FrmFLW_MyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLW\FrmFLW_Buy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLW\FrmFLW_Buy.Designer.cs">
+      <DependentUpon>FrmFLW_Buy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLW\FrmFLW_Inbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLW\FrmFLW_Inbox.Designer.cs">
+      <DependentUpon>FrmFLW_Inbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLW\FrmFLW_Noncompliance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLW\FrmFLW_Noncompliance.designer.cs">
+      <DependentUpon>FrmFLW_Noncompliance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLW\FrmFLW_Outbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLW\FrmFLW_Outbox.Designer.cs">
+      <DependentUpon>FrmFLW_Outbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLW\FrmFLW_Khorooj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLW\FrmFLW_Khorooj.Designer.cs">
+      <DependentUpon>FrmFLW_Khorooj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLW\FrmFLW_KhoroojPaya.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLW\FrmFLW_KhoroojPaya.Designer.cs">
+      <DependentUpon>FrmFLW_KhoroojPaya.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLW\FrmFLW_Ronevesht.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLW\FrmFLW_Ronevesht.Designer.cs">
+      <DependentUpon>FrmFLW_Ronevesht.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edari\FrmEdari_GharardadAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edari\FrmEdari_GharardadAll.Designer.cs">
+      <DependentUpon>FrmEdari_GharardadAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLW\FrmFLW_Tahvil_tatbigh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLW\FrmFLW_Tahvil_tatbigh.Designer.cs">
+      <DependentUpon>FrmFLW_Tahvil_tatbigh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLW\FrmFLW_KasrHazine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLW\FrmFLW_KasrHazine.designer.cs">
+      <DependentUpon>FrmFLW_KasrHazine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLW\FrmFLW_KhoroojMahsool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLW\FrmFLW_KhoroojMahsool.Designer.cs">
+      <DependentUpon>FrmFLW_KhoroojMahsool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLW\FrmFLW_Estelam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLW\FrmFLW_Estelam.Designer.cs">
+      <DependentUpon>FrmFLW_Estelam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLW\FrmFLW_EstelamDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLW\FrmFLW_EstelamDoc.Designer.cs">
+      <DependentUpon>FrmFLW_EstelamDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLW\FrmFLW_NoncomplianceDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLW\FrmFLW_NoncomplianceDoc.Designer.cs">
+      <DependentUpon>FrmFLW_NoncomplianceDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLW\FrmFLW_EstelamBarge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLW\FrmFLW_EstelamBarge.Designer.cs">
+      <DependentUpon>FrmFLW_EstelamBarge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\FrmManager_Exit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\FrmManager_Exit.Designer.cs">
+      <DependentUpon>FrmManager_Exit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tolid\FrmTolid_KontorPazireshRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tolid\FrmTolid_KontorPazireshRate.Designer.cs">
+      <DependentUpon>FrmTolid_KontorPazireshRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\FrmTJRT_Samane.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\FrmTJRT_Samane.Designer.cs">
+      <DependentUpon>FrmTJRT_Samane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\FrmTJRT_BargeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\FrmTJRT_BargeList.Designer.cs">
+      <DependentUpon>FrmTJRT_BargeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tolid\FrmTolid_BarnameTolidList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tolid\FrmTolid_BarnameTolidList.Designer.cs">
+      <DependentUpon>FrmTolid_BarnameTolidList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\FrmTJRT_Arayesh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\FrmTJRT_Arayesh.Designer.cs">
+      <DependentUpon>FrmTJRT_Arayesh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\FrmTJRT_Factor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\FrmTJRT_Factor.Designer.cs">
+      <DependentUpon>FrmTJRT_Factor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tolid\FrmTolid_KontorTestReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tolid\FrmTolid_KontorTestReport.Designer.cs">
+      <DependentUpon>FrmTolid_KontorTestReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tolid\FrmTolid_KontorTestHAddKontorAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tolid\FrmTolid_KontorTestHAddKontorAll.Designer.cs">
+      <DependentUpon>FrmTolid_KontorTestHAddKontorAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tolid\FrmTolid_KontorTestDList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tolid\FrmTolid_KontorTestDList.Designer.cs">
+      <DependentUpon>FrmTolid_KontorTestDList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tolid\FrmTolid_KontorTestHAddKontor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tolid\FrmTolid_KontorTestHAddKontor.Designer.cs">
+      <DependentUpon>FrmTolid_KontorTestHAddKontor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tamin\FrmTaminListSoratvaziat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tamin\FrmTaminListSoratvaziat.Designer.cs">
+      <DependentUpon>FrmTaminListSoratvaziat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Planing\FrmPLNGhetehProcessOther.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planing\FrmPLNGhetehProcessOther.Designer.cs">
+      <DependentUpon>FrmPLNGhetehProcessOther.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PM\ClsPM.cs" />
+    <Compile Include="PM\FrmPM_Personel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PM\FrmPM_Personel.designer.cs">
+      <DependentUpon>FrmPM_Personel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PM\FrmPM_Peymankar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PM\FrmPM_Peymankar.designer.cs">
+      <DependentUpon>FrmPM_Peymankar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Takvin\FrmTakvinGhete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Takvin\FrmTakvinGhete.Designer.cs">
+      <DependentUpon>FrmTakvinGhete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Planing\FrmPLN_SearchBarnameKontor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planing\FrmPLN_SearchBarnameKontor.Designer.cs">
+      <DependentUpon>FrmPLN_SearchBarnameKontor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\FrmSarbarPersonel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\FrmSarbarPersonel.Designer.cs">
+      <DependentUpon>FrmSarbarPersonel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Planing\FrmPLN_SabtBarnameKontor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planing\FrmPLN_SabtBarnameKontor.Designer.cs">
+      <DependentUpon>FrmPLN_SabtBarnameKontor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\Frm_BoorsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\Frm_BoorsReport.Designer.cs">
+      <DependentUpon>Frm_BoorsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\Frm_ManabeSanadOff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\Frm_ManabeSanadOff.Designer.cs">
+      <DependentUpon>Frm_ManabeSanadOff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\Frm_ManabeDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\Frm_ManabeDashboard.Designer.cs">
+      <DependentUpon>Frm_ManabeDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\Frm_ManabeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\Frm_ManabeReport.Designer.cs">
+      <DependentUpon>Frm_ManabeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\Frm_ManabeCoding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\Frm_ManabeCoding.Designer.cs">
+      <DependentUpon>Frm_ManabeCoding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\Frm_Tafsili_Etebar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\Frm_Tafsili_Etebar.designer.cs">
+      <DependentUpon>Frm_Tafsili_Etebar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Planing\FrmPLN_AnalyzeSefareshat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planing\FrmPLN_AnalyzeSefareshat.designer.cs">
+      <DependentUpon>FrmPLN_AnalyzeSefareshat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM\FrmPRM_DarkhastKhadamat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM\FrmPRM_DarkhastKhadamat.designer.cs">
+      <DependentUpon>FrmPRM_DarkhastKhadamat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Takvin\FrmTakvinTreeCopy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Takvin\FrmTakvinTreeCopy.Designer.cs">
+      <DependentUpon>FrmTakvinTreeCopy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Takvin\Frm_TakvinProccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Takvin\Frm_TakvinProccess.Designer.cs">
+      <DependentUpon>Frm_TakvinProccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tamin\FrmTaminNasbRepAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tamin\FrmTaminNasbRepAll.Designer.cs">
+      <DependentUpon>FrmTaminNasbRepAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\FrmMaliBestankaran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\FrmMaliBestankaran.Designer.cs">
+      <DependentUpon>FrmMaliBestankaran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\Frm_TreeMahsoolRepMali.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\Frm_TreeMahsoolRepMali.Designer.cs">
+      <DependentUpon>Frm_TreeMahsoolRepMali.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Job\ClsJob.cs" />
+    <Compile Include="Job\FrmJobAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Job\FrmJobAction.Designer.cs">
+      <DependentUpon>FrmJobAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Job\FrmJobRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Job\FrmJobRequest.Designer.cs">
+      <DependentUpon>FrmJobRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Job\FrmJobSoratJalase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Job\FrmJobSoratJalase.Designer.cs">
+      <DependentUpon>FrmJobSoratJalase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Job\FrmJobSoratSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Job\FrmJobSoratSearch.designer.cs">
+      <DependentUpon>FrmJobSoratSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Job\FrmJobTaskModir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Job\FrmJobTaskModir.Designer.cs">
+      <DependentUpon>FrmJobTaskModir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Frm_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Frm_Main.designer.cs">
+      <DependentUpon>Frm_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\FrmCostPriceForoosh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\FrmCostPriceForoosh.Designer.cs">
+      <DependentUpon>FrmCostPriceForoosh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\FrmCostPriceMahsool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\FrmCostPriceMahsool.designer.cs">
+      <DependentUpon>FrmCostPriceMahsool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\FrmCostPriceMahsoolTakvin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\FrmCostPriceMahsoolTakvin.Designer.cs">
+      <DependentUpon>FrmCostPriceMahsoolTakvin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\FrmCostTreeMasraf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\FrmCostTreeMasraf.Designer.cs">
+      <DependentUpon>FrmCostTreeMasraf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\FrmCostTreeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\FrmCostTreeReport.Designer.cs">
+      <DependentUpon>FrmCostTreeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\FrmMali_SanadTafsili.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\FrmMali_SanadTafsili.Designer.cs">
+      <DependentUpon>FrmMali_SanadTafsili.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\FrmSarbarFirsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\FrmSarbarFirsReport.Designer.cs">
+      <DependentUpon>FrmSarbarFirsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\FrmSarbarLastDateReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\FrmSarbarLastDateReport.Designer.cs">
+      <DependentUpon>FrmSarbarLastDateReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\FrmSarbarLastReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\FrmSarbarLastReport.Designer.cs">
+      <DependentUpon>FrmSarbarLastReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\FrmSodZianReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\FrmSodZianReport.Designer.cs">
+      <DependentUpon>FrmSodZianReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\FrmSofrehDateReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\FrmSofrehDateReport.Designer.cs">
+      <DependentUpon>FrmSofrehDateReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\FrmSofrehReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\FrmSofrehReport.Designer.cs">
+      <DependentUpon>FrmSofrehReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Planing\ClsPlanning.cs" />
+    <Compile Include="Planing\FrmPLN_AnalysGheteTemp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planing\FrmPLN_AnalysGheteTemp.Designer.cs">
+      <DependentUpon>FrmPLN_AnalysGheteTemp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Planing\FrmPln_GantDastgah.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planing\FrmPln_GantDastgah.designer.cs">
+      <DependentUpon>FrmPln_GantDastgah.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Planing\FrmPLN_GantMachine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planing\FrmPLN_GantMachine.designer.cs">
+      <DependentUpon>FrmPLN_GantMachine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Planing\FrmPLN_SabtBarnameSefaresh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planing\FrmPLN_SabtBarnameSefaresh.Designer.cs">
+      <DependentUpon>FrmPLN_SabtBarnameSefaresh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM\FrmPRM_Aghlam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM\FrmPRM_Aghlam.Designer.cs">
+      <DependentUpon>FrmPRM_Aghlam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM\FrmPRM_DarkhastKharid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM\FrmPRM_DarkhastKharid.designer.cs">
+      <DependentUpon>FrmPRM_DarkhastKharid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\FrmManager_Buy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\FrmManager_Buy.designer.cs">
+      <DependentUpon>FrmManager_Buy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\FrmManager_Forosh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\FrmManager_Forosh.designer.cs">
+      <DependentUpon>FrmManager_Forosh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\FrmManager_RadyabiGharadad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\FrmManager_RadyabiGharadad.designer.cs">
+      <DependentUpon>FrmManager_RadyabiGharadad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\FrmManager_TreeMahsul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\FrmManager_TreeMahsul.designer.cs">
+      <DependentUpon>FrmManager_TreeMahsul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Planing\FrmPLN_AnalysGhete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planing\FrmPLN_AnalysGhete.Designer.cs">
+      <DependentUpon>FrmPLN_AnalysGhete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Planing\FrmPLN_RadyabiGhete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planing\FrmPLN_RadyabiGhete.Designer.cs">
+      <DependentUpon>FrmPLN_RadyabiGhete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Planing\FrmPLN_SabtBarname.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planing\FrmPLN_SabtBarname.Designer.cs">
+      <DependentUpon>FrmPLN_SabtBarname.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Planing\FrmPLN_ShowBarnameHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planing\FrmPLN_ShowBarnameHD.Designer.cs">
+      <DependentUpon>FrmPLN_ShowBarnameHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Planing\FrmPLN_Zakhire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planing\FrmPLN_Zakhire.Designer.cs">
+      <DependentUpon>FrmPLN_Zakhire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM\FrmPRM_Morakhasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM\FrmPRM_Morakhasi.Designer.cs">
+      <DependentUpon>FrmPRM_Morakhasi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\FrmSale_GharardadControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\FrmSale_GharardadControl.designer.cs">
+      <DependentUpon>FrmSale_GharardadControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Takvin\FrmTakvin_GhetehSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Takvin\FrmTakvin_GhetehSearch.Designer.cs">
+      <DependentUpon>FrmTakvin_GhetehSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Takvin\FrmTakvin_RepTree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Takvin\FrmTakvin_RepTree.Designer.cs">
+      <DependentUpon>FrmTakvin_RepTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\FrmChengPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\FrmChengPass.Designer.cs">
+      <DependentUpon>FrmChengPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\FrmDore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\FrmDore.designer.cs">
+      <DependentUpon>FrmDore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\ClsMain.cs" />
+    <Compile Include="Main\FrmTafsili.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\FrmTafsili.designer.cs">
+      <DependentUpon>FrmTafsili.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\FrmTafsili2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\FrmTafsili2.designer.cs">
+      <DependentUpon>FrmTafsili2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\FrmTakvinKala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\FrmTakvinKala.designer.cs">
+      <DependentUpon>FrmTakvinKala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\PleaseWait.cs" />
+    <Compile Include="ClsPublic.cs" />
+    <Compile Include="Mali\ClsMali.cs" />
+    <Compile Include="Mali\FrmBudjeAmalkard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\FrmBudjeAmalkard.Designer.cs">
+      <DependentUpon>FrmBudjeAmalkard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\FrmBudjeBarname.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\FrmBudjeBarname.Designer.cs">
+      <DependentUpon>FrmBudjeBarname.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\FrmBudjeInsYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\FrmBudjeInsYear.Designer.cs">
+      <DependentUpon>FrmBudjeInsYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\FrmBudjeSoodZ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\FrmBudjeSoodZ.Designer.cs">
+      <DependentUpon>FrmBudjeSoodZ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\FrmCostDastmozd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\FrmCostDastmozd.Designer.cs">
+      <DependentUpon>FrmCostDastmozd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\FrmCostSarbar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\FrmCostSarbar.Designer.cs">
+      <DependentUpon>FrmCostSarbar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\FrmCostTree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\FrmCostTree.Designer.cs">
+      <DependentUpon>FrmCostTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\Frm_BankRep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\Frm_BankRep.Designer.cs">
+      <DependentUpon>Frm_BankRep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\Frm_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\Frm_Menu.Designer.cs">
+      <DependentUpon>Frm_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\Frm_Ras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\Frm_Ras.Designer.cs">
+      <DependentUpon>Frm_Ras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\Frm_SenniReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\Frm_SenniReport.designer.cs">
+      <DependentUpon>Frm_SenniReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\Frm_Senni_ForoshReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\Frm_Senni_ForoshReport.designer.cs">
+      <DependentUpon>Frm_Senni_ForoshReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\Frm_Senni_Operate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\Frm_Senni_Operate.Designer.cs">
+      <DependentUpon>Frm_Senni_Operate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\Frm_Senni_Ras_Check.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\Frm_Senni_Ras_Check.Designer.cs">
+      <DependentUpon>Frm_Senni_Ras_Check.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\Frm_Senni_Ras_Forosh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\Frm_Senni_Ras_Forosh.designer.cs">
+      <DependentUpon>Frm_Senni_Ras_Forosh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\Frm_Tafsili.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\Frm_Tafsili.Designer.cs">
+      <DependentUpon>Frm_Tafsili.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mali\Frm_Total.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mali\Frm_Total.Designer.cs">
+      <DependentUpon>Frm_Total.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Planing\FrmGhaatSefaresh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planing\FrmGhaatSefaresh.Designer.cs">
+      <DependentUpon>FrmGhaatSefaresh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Planing\FrmPLNGhetehProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planing\FrmPLNGhetehProcess.Designer.cs">
+      <DependentUpon>FrmPLNGhetehProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Planing\FrmPLN_BlockKala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planing\FrmPLN_BlockKala.Designer.cs">
+      <DependentUpon>FrmPLN_BlockKala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Planing\FrmPLN_cntF2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planing\FrmPLN_cntF2.designer.cs">
+      <DependentUpon>FrmPLN_cntF2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Planing\FrmPLN_RadyabiBarname.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planing\FrmPLN_RadyabiBarname.Designer.cs">
+      <DependentUpon>FrmPLN_RadyabiBarname.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Planing\FrmPLN_ReportSefaresh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planing\FrmPLN_ReportSefaresh.Designer.cs">
+      <DependentUpon>FrmPLN_ReportSefaresh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PM\FrmPM_AddTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PM\FrmPM_AddTask.Designer.cs">
+      <DependentUpon>FrmPM_AddTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PM\FrmPM_Calendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PM\FrmPM_Calendar.Designer.cs">
+      <DependentUpon>FrmPM_Calendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PM\FrmPM_CalendarHoliday.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PM\FrmPM_CalendarHoliday.Designer.cs">
+      <DependentUpon>FrmPM_CalendarHoliday.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PM\FrmPM_classANDtype.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PM\FrmPM_classANDtype.designer.cs">
+      <DependentUpon>FrmPM_classANDtype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PM\FrmPM_codeMachine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PM\FrmPM_codeMachine.designer.cs">
+      <DependentUpon>FrmPM_codeMachine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PM\FrmPM_Failure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PM\FrmPM_Failure.Designer.cs">
+      <DependentUpon>FrmPM_Failure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PM\FrmPM_Instruction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PM\FrmPM_Instruction.Designer.cs">
+      <DependentUpon>FrmPM_Instruction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PM\FrmPM_Repair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PM\FrmPM_Repair.designer.cs">
+      <DependentUpon>FrmPM_Repair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PM\FrmPM_RepairShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PM\FrmPM_RepairShow.Designer.cs">
+      <DependentUpon>FrmPM_RepairShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PM\FrmPM_ReportAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PM\FrmPM_ReportAll.Designer.cs">
+      <DependentUpon>FrmPM_ReportAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PM\FrmPM_Section.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PM\FrmPM_Section.Designer.cs">
+      <DependentUpon>FrmPM_Section.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PM\FrmPM_Show_machin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PM\FrmPM_Show_machin.designer.cs">
+      <DependentUpon>FrmPM_Show_machin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PM\FrmPM_SparePart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PM\FrmPM_SparePart.designer.cs">
+      <DependentUpon>FrmPM_SparePart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_login.designer.cs">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvokeHelper.cs" />
+    <Compile Include="PersianCultureHelper.cs" />
+    <Compile Include="PM\FrmPM_UnitPlace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PM\FrmPM_UnitPlace.designer.cs">
+      <DependentUpon>FrmPM_UnitPlace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Anbar\FrmAnbar_GroupKala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Anbar\FrmAnbar_GroupKala.Designer.cs">
+      <DependentUpon>FrmAnbar_GroupKala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\ClsSale.cs" />
+    <Compile Include="Sale\FrmSale_Budget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\FrmSale_Budget.Designer.cs">
+      <DependentUpon>FrmSale_Budget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\FrmSale_RepControlHavale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\FrmSale_RepControlHavale.designer.cs">
+      <DependentUpon>FrmSale_RepControlHavale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\FrmSale_RepControlSefaresh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\FrmSale_RepControlSefaresh.designer.cs">
+      <DependentUpon>FrmSale_RepControlSefaresh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\FrmTender_Data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\FrmTender_Data.Designer.cs">
+      <DependentUpon>FrmTender_Data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\FrmTender_Raghib.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\FrmTender_Raghib.Designer.cs">
+      <DependentUpon>FrmTender_Raghib.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\FrmTender_RaghibData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\FrmTender_RaghibData.Designer.cs">
+      <DependentUpon>FrmTender_RaghibData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\FrmTender_Show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\FrmTender_Show.Designer.cs">
+      <DependentUpon>FrmTender_Show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Takvin\ClsTakvin.cs" />
+    <Compile Include="Takvin\FrmTakvinBOM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Takvin\FrmTakvinBOM.Designer.cs">
+      <DependentUpon>FrmTakvinBOM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Takvin\FrmTakvinBomGheteh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Takvin\FrmTakvinBomGheteh.Designer.cs">
+      <DependentUpon>FrmTakvinBomGheteh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Takvin\FrmTakvinBomSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Takvin\FrmTakvinBomSearch.Designer.cs">
+      <DependentUpon>FrmTakvinBomSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Takvin\FrmTakvinMostanad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Takvin\FrmTakvinMostanad.Designer.cs">
+      <DependentUpon>FrmTakvinMostanad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Takvin\FrmTakvinSearchTree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Takvin\FrmTakvinSearchTree.Designer.cs">
+      <DependentUpon>FrmTakvinSearchTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Takvin\FrmTakvinShowMostanadAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Takvin\FrmTakvinShowMostanadAll.Designer.cs">
+      <DependentUpon>FrmTakvinShowMostanadAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Takvin\FrmTakvinTree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Takvin\FrmTakvinTree.Designer.cs">
+      <DependentUpon>FrmTakvinTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Takvin\FrmTakvin_RepMahsoolAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Takvin\FrmTakvin_RepMahsoolAll.designer.cs">
+      <DependentUpon>FrmTakvin_RepMahsoolAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Takvin\FrmTakvin_Taeed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Takvin\FrmTakvin_Taeed.designer.cs">
+      <DependentUpon>FrmTakvin_Taeed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tamin\ClsTamin.cs" />
+    <Compile Include="Tamin\FrmTaminSanadList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tamin\FrmTaminSanadList.Designer.cs">
+      <DependentUpon>FrmTaminSanadList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tamin\FrmTaminTafsili2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tamin\FrmTaminTafsili2.designer.cs">
+      <DependentUpon>FrmTaminTafsili2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tolid\ClsTolid.cs" />
+    <Compile Include="Tolid\FrmTolidDailyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tolid\FrmTolidDailyReport.designer.cs">
+      <DependentUpon>FrmTolidDailyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tolid\FrmTolidRadyabi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tolid\FrmTolidRadyabi.designer.cs">
+      <DependentUpon>FrmTolidRadyabi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tolid\FrmTolidShowDailyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tolid\FrmTolidShowDailyReport.Designer.cs">
+      <DependentUpon>FrmTolidShowDailyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tolid\FrmTolidShowRadyabi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tolid\FrmTolidShowRadyabi.Designer.cs">
+      <DependentUpon>FrmTolidShowRadyabi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tolid\FrmTolid_Arayesh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tolid\FrmTolid_Arayesh.Designer.cs">
+      <DependentUpon>FrmTolid_Arayesh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tolid\FrmTolid_Hack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tolid\FrmTolid_Hack.Designer.cs">
+      <DependentUpon>FrmTolid_Hack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tolid\FrmTolid_KontorTestH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tolid\FrmTolid_KontorTestH.designer.cs">
+      <DependentUpon>FrmTolid_KontorTestH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tolid\FrmTolid_KontorTestList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tolid\FrmTolid_KontorTestList.designer.cs">
+      <DependentUpon>FrmTolid_KontorTestList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tolid\FrmTolid_MojudiKhat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tolid\FrmTolid_MojudiKhat.Designer.cs">
+      <DependentUpon>FrmTolid_MojudiKhat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tolid\FrmTolid_SabtDailyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tolid\FrmTolid_SabtDailyReport.Designer.cs">
+      <DependentUpon>FrmTolid_SabtDailyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tolid\FrmTolid_ShenaseKalaRep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tolid\FrmTolid_ShenaseKalaRep.Designer.cs">
+      <DependentUpon>FrmTolid_ShenaseKalaRep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tolid\FrmTolid_Stop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tolid\FrmTolid_Stop.Designer.cs">
+      <DependentUpon>FrmTolid_Stop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tolid\FrmTolid_Zayeat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tolid\FrmTolid_Zayeat.Designer.cs">
+      <DependentUpon>FrmTolid_Zayeat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UM\ClsUM.cs" />
+    <Compile Include="UM\FrmUM_Base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UM\FrmUM_Base.designer.cs">
+      <DependentUpon>FrmUM_Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UM\FrmUM_PersonelChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UM\FrmUM_PersonelChart.designer.cs">
+      <DependentUpon>FrmUM_PersonelChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UM\FrnUM_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UM\FrnUM_Report.designer.cs">
+      <DependentUpon>FrnUM_Report.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Anbar\FrmAnbar_GroupKalaKala.resx">
+      <DependentUpon>FrmAnbar_GroupKalaKala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Anbar\FrmAnbar_RosoobKala.resx">
+      <DependentUpon>FrmAnbar_RosoobKala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Anbar\FrmHavaleAnbar.resx">
+      <DependentUpon>FrmHavaleAnbar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Anbar\FrmKala.resx">
+      <DependentUpon>FrmKala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Anbar\FrmZamanDarRah.resx">
+      <DependentUpon>FrmZamanDarRah.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Anbar\FrmZAnbar.resx">
+      <DependentUpon>FrmZAnbar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buy\FrmBuy_Barname.resx">
+      <DependentUpon>FrmBuy_Barname.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buy\FrmBuy_BarnameSearch.resx">
+      <DependentUpon>FrmBuy_BarnameSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buy\FrmBuy_DarkhastSearch.resx">
+      <DependentUpon>FrmBuy_DarkhastSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buy\FrmBuy_Ersal.resx">
+      <DependentUpon>FrmBuy_Ersal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buy\FrmBuy_Eslah.resx">
+      <DependentUpon>FrmBuy_Eslah.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buy\FrmBuy_Part.resx">
+      <DependentUpon>FrmBuy_Part.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buy\FrmBuy_Peymankar.resx">
+      <DependentUpon>FrmBuy_Peymankar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buy\FrmBuy_Pish.resx">
+      <DependentUpon>FrmBuy_Pish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buy\FrmBuy_RepAll.resx">
+      <DependentUpon>FrmBuy_RepAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buy\FrmBuy_RepPish.resx">
+      <DependentUpon>FrmBuy_RepPish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buy\FrmBuy_Taeed.resx">
+      <DependentUpon>FrmBuy_Taeed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buy\FrmBuy_TaeedReturn.resx">
+      <DependentUpon>FrmBuy_TaeedReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buy\FrmCostPrice.resx">
+      <DependentUpon>FrmCostPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buy\FrmBuy_Bestankaran.resx">
+      <DependentUpon>FrmBuy_Bestankaran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\Frm_add_kala.resx">
+      <DependentUpon>Frm_add_kala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\Frm_Customer.resx">
+      <DependentUpon>Frm_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\Frm_Customer_adjoint_work.resx">
+      <DependentUpon>Frm_Customer_adjoint_work.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\Frm_Customer_title.resx">
+      <DependentUpon>Frm_Customer_title.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\Frm_H_Exbition.resx">
+      <DependentUpon>Frm_H_Exbition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\frm_report.resx">
+      <DependentUpon>frm_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edari\FrmEdari_AddPersonelPemankar.resx">
+      <DependentUpon>FrmEdari_AddPersonelPemankar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edari\FrmEdari_ListPersonel.resx">
+      <DependentUpon>FrmEdari_ListPersonel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edari\FrmEdari_Madakto2Pw.resx">
+      <DependentUpon>FrmEdari_Madakto2Pw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edari\FrmEdari_Gharardad.resx">
+      <DependentUpon>FrmEdari_Gharardad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edari\FrmEdari_RepPersonel.resx">
+      <DependentUpon>FrmEdari_RepPersonel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edari\FrmEdari_ReportEnterExit.resx">
+      <DependentUpon>FrmEdari_ReportEnterExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edari\FrmEnterExit.resx">
+      <DependentUpon>FrmEnterExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLW\FrmFLW_MyForm.resx">
+      <DependentUpon>FrmFLW_MyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLW\FrmFLW_Buy.resx">
+      <DependentUpon>FrmFLW_Buy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLW\FrmFLW_Inbox.resx">
+      <DependentUpon>FrmFLW_Inbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLW\FrmFLW_Noncompliance.resx">
+      <DependentUpon>FrmFLW_Noncompliance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLW\FrmFLW_Outbox.resx">
+      <DependentUpon>FrmFLW_Outbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLW\FrmFLW_Khorooj.resx">
+      <DependentUpon>FrmFLW_Khorooj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLW\FrmFLW_KhoroojPaya.resx">
+      <DependentUpon>FrmFLW_KhoroojPaya.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLW\FrmFLW_Ronevesht.resx">
+      <DependentUpon>FrmFLW_Ronevesht.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edari\FrmEdari_GharardadAll.resx">
+      <DependentUpon>FrmEdari_GharardadAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLW\FrmFLW_Tahvil_tatbigh.resx">
+      <DependentUpon>FrmFLW_Tahvil_tatbigh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLW\FrmFLW_KasrHazine.resx">
+      <DependentUpon>FrmFLW_KasrHazine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLW\FrmFLW_KhoroojMahsool.resx">
+      <DependentUpon>FrmFLW_KhoroojMahsool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLW\FrmFLW_Estelam.resx">
+      <DependentUpon>FrmFLW_Estelam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLW\FrmFLW_EstelamDoc.resx">
+      <DependentUpon>FrmFLW_EstelamDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLW\FrmFLW_NoncomplianceDoc.resx">
+      <DependentUpon>FrmFLW_NoncomplianceDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLW\FrmFLW_EstelamBarge.resx">
+      <DependentUpon>FrmFLW_EstelamBarge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\FrmManager_Exit.resx">
+      <DependentUpon>FrmManager_Exit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tolid\FrmTolid_KontorPazireshRate.resx">
+      <DependentUpon>FrmTolid_KontorPazireshRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\FrmTJRT_Samane.resx">
+      <DependentUpon>FrmTJRT_Samane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\FrmTJRT_BargeList.resx">
+      <DependentUpon>FrmTJRT_BargeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tolid\FrmTolid_BarnameTolidList.resx">
+      <DependentUpon>FrmTolid_BarnameTolidList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\FrmTJRT_Arayesh.resx">
+      <DependentUpon>FrmTJRT_Arayesh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\FrmTJRT_Factor.resx">
+      <DependentUpon>FrmTJRT_Factor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tolid\FrmTolid_KontorTestReport.resx">
+      <DependentUpon>FrmTolid_KontorTestReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tolid\FrmTolid_KontorTestHAddKontorAll.resx">
+      <DependentUpon>FrmTolid_KontorTestHAddKontorAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tolid\FrmTolid_KontorTestDList.resx">
+      <DependentUpon>FrmTolid_KontorTestDList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tolid\FrmTolid_KontorTestHAddKontor.resx">
+      <DependentUpon>FrmTolid_KontorTestHAddKontor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tamin\FrmTaminListSoratvaziat.resx">
+      <DependentUpon>FrmTaminListSoratvaziat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planing\FrmPLNGhetehProcessOther.resx">
+      <DependentUpon>FrmPLNGhetehProcessOther.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PM\FrmPM_Personel.resx">
+      <DependentUpon>FrmPM_Personel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PM\FrmPM_Peymankar.resx">
+      <DependentUpon>FrmPM_Peymankar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Takvin\FrmTakvinGhete.resx">
+      <DependentUpon>FrmTakvinGhete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planing\FrmPLN_SearchBarnameKontor.resx">
+      <DependentUpon>FrmPLN_SearchBarnameKontor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\FrmSarbarPersonel.resx">
+      <DependentUpon>FrmSarbarPersonel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planing\FrmPLN_SabtBarnameKontor.resx">
+      <DependentUpon>FrmPLN_SabtBarnameKontor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\Frm_BoorsReport.resx">
+      <DependentUpon>Frm_BoorsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\Frm_ManabeSanadOff.resx">
+      <DependentUpon>Frm_ManabeSanadOff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\Frm_ManabeDashboard.resx">
+      <DependentUpon>Frm_ManabeDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\Frm_ManabeReport.resx">
+      <DependentUpon>Frm_ManabeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\Frm_ManabeCoding.resx">
+      <DependentUpon>Frm_ManabeCoding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\Frm_Tafsili_Etebar.resx">
+      <DependentUpon>Frm_Tafsili_Etebar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planing\FrmPLN_AnalyzeSefareshat.resx">
+      <DependentUpon>FrmPLN_AnalyzeSefareshat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM\FrmPRM_DarkhastKhadamat.resx">
+      <DependentUpon>FrmPRM_DarkhastKhadamat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Takvin\FrmTakvinTreeCopy.resx">
+      <DependentUpon>FrmTakvinTreeCopy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Takvin\Frm_TakvinProccess.resx">
+      <DependentUpon>Frm_TakvinProccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tamin\FrmTaminNasbRepAll.resx">
+      <DependentUpon>FrmTaminNasbRepAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\FrmMaliBestankaran.resx">
+      <DependentUpon>FrmMaliBestankaran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\Frm_TreeMahsoolRepMali.resx">
+      <DependentUpon>Frm_TreeMahsoolRepMali.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Job\FrmJobAction.resx">
+      <DependentUpon>FrmJobAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Job\FrmJobRequest.resx">
+      <DependentUpon>FrmJobRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Job\FrmJobSoratJalase.resx">
+      <DependentUpon>FrmJobSoratJalase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Job\FrmJobSoratSearch.resx">
+      <DependentUpon>FrmJobSoratSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Job\FrmJobTaskModir.resx">
+      <DependentUpon>FrmJobTaskModir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Frm_Main.resx">
+      <DependentUpon>Frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\FrmCostPriceForoosh.resx">
+      <DependentUpon>FrmCostPriceForoosh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\FrmCostPriceMahsool.resx">
+      <DependentUpon>FrmCostPriceMahsool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\FrmCostPriceMahsoolTakvin.resx">
+      <DependentUpon>FrmCostPriceMahsoolTakvin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\FrmCostTreeMasraf.resx">
+      <DependentUpon>FrmCostTreeMasraf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\FrmCostTreeReport.resx">
+      <DependentUpon>FrmCostTreeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\FrmMali_SanadTafsili.resx">
+      <DependentUpon>FrmMali_SanadTafsili.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\FrmSarbarFirsReport.resx">
+      <DependentUpon>FrmSarbarFirsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\FrmSarbarLastDateReport.resx">
+      <DependentUpon>FrmSarbarLastDateReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\FrmSarbarLastReport.resx">
+      <DependentUpon>FrmSarbarLastReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\FrmSodZianReport.resx">
+      <DependentUpon>FrmSodZianReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\FrmSofrehDateReport.resx">
+      <DependentUpon>FrmSofrehDateReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\FrmSofrehReport.resx">
+      <DependentUpon>FrmSofrehReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planing\FrmPLN_AnalysGheteTemp.resx">
+      <DependentUpon>FrmPLN_AnalysGheteTemp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planing\FrmPln_GantDastgah.resx">
+      <DependentUpon>FrmPln_GantDastgah.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planing\FrmPLN_GantMachine.resx">
+      <DependentUpon>FrmPLN_GantMachine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planing\FrmPLN_SabtBarnameSefaresh.resx">
+      <DependentUpon>FrmPLN_SabtBarnameSefaresh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM\FrmPRM_Aghlam.resx">
+      <DependentUpon>FrmPRM_Aghlam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM\FrmPRM_DarkhastKharid.resx">
+      <DependentUpon>FrmPRM_DarkhastKharid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\FrmManager_Buy.resx">
+      <DependentUpon>FrmManager_Buy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\FrmManager_Forosh.resx">
+      <DependentUpon>FrmManager_Forosh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\FrmManager_RadyabiGharadad.resx">
+      <DependentUpon>FrmManager_RadyabiGharadad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\FrmManager_TreeMahsul.resx">
+      <DependentUpon>FrmManager_TreeMahsul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planing\FrmPLN_AnalysGhete.resx">
+      <DependentUpon>FrmPLN_AnalysGhete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planing\FrmPLN_RadyabiGhete.resx">
+      <DependentUpon>FrmPLN_RadyabiGhete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planing\FrmPLN_SabtBarname.resx">
+      <DependentUpon>FrmPLN_SabtBarname.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planing\FrmPLN_ShowBarnameHD.resx">
+      <DependentUpon>FrmPLN_ShowBarnameHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planing\FrmPLN_Zakhire.resx">
+      <DependentUpon>FrmPLN_Zakhire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM\FrmPRM_Morakhasi.resx">
+      <DependentUpon>FrmPRM_Morakhasi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\FrmSale_GharardadControl.resx">
+      <DependentUpon>FrmSale_GharardadControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Takvin\FrmTakvin_GhetehSearch.resx">
+      <DependentUpon>FrmTakvin_GhetehSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Takvin\FrmTakvin_RepTree.resx">
+      <DependentUpon>FrmTakvin_RepTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\FrmChengPass.resx">
+      <DependentUpon>FrmChengPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\FrmDore.resx">
+      <DependentUpon>FrmDore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\FrmTafsili.resx">
+      <DependentUpon>FrmTafsili.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\FrmTafsili2.resx">
+      <DependentUpon>FrmTafsili2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\FrmTakvinKala.resx">
+      <DependentUpon>FrmTakvinKala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\FrmBudjeAmalkard.resx">
+      <DependentUpon>FrmBudjeAmalkard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\FrmBudjeBarname.resx">
+      <DependentUpon>FrmBudjeBarname.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\FrmBudjeInsYear.resx">
+      <DependentUpon>FrmBudjeInsYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\FrmBudjeSoodZ.resx">
+      <DependentUpon>FrmBudjeSoodZ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\FrmCostDastmozd.resx">
+      <DependentUpon>FrmCostDastmozd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\FrmCostSarbar.resx">
+      <DependentUpon>FrmCostSarbar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\FrmCostTree.resx">
+      <DependentUpon>FrmCostTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\Frm_Menu.resx">
+      <DependentUpon>Frm_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\Frm_Ras.resx">
+      <DependentUpon>Frm_Ras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\Frm_SenniReport.resx">
+      <DependentUpon>Frm_SenniReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\Frm_Senni_ForoshReport.resx">
+      <DependentUpon>Frm_Senni_ForoshReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\Frm_Senni_Operate.resx">
+      <DependentUpon>Frm_Senni_Operate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\Frm_Senni_Ras_Check.resx">
+      <DependentUpon>Frm_Senni_Ras_Check.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\Frm_Senni_Ras_Forosh.resx">
+      <DependentUpon>Frm_Senni_Ras_Forosh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\Frm_Tafsili.resx">
+      <DependentUpon>Frm_Tafsili.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mali\Frm_Total.resx">
+      <DependentUpon>Frm_Total.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planing\FrmGhaatSefaresh.resx">
+      <DependentUpon>FrmGhaatSefaresh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planing\FrmPLNGhetehProcess.resx">
+      <DependentUpon>FrmPLNGhetehProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planing\FrmPLN_BlockKala.resx">
+      <DependentUpon>FrmPLN_BlockKala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planing\FrmPLN_cntF2.resx">
+      <DependentUpon>FrmPLN_cntF2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planing\FrmPLN_RadyabiBarname.resx">
+      <DependentUpon>FrmPLN_RadyabiBarname.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planing\FrmPLN_ReportSefaresh.resx">
+      <DependentUpon>FrmPLN_ReportSefaresh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PM\FrmPM_AddTask.resx">
+      <DependentUpon>FrmPM_AddTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PM\FrmPM_Calendar.resx">
+      <DependentUpon>FrmPM_Calendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PM\FrmPM_CalendarHoliday.resx">
+      <DependentUpon>FrmPM_CalendarHoliday.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PM\FrmPM_classANDtype.resx">
+      <DependentUpon>FrmPM_classANDtype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PM\FrmPM_codeMachine.resx">
+      <DependentUpon>FrmPM_codeMachine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PM\FrmPM_Failure.resx">
+      <DependentUpon>FrmPM_Failure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PM\FrmPM_Instruction.resx">
+      <DependentUpon>FrmPM_Instruction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PM\FrmPM_Repair.resx">
+      <DependentUpon>FrmPM_Repair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PM\FrmPM_RepairShow.resx">
+      <DependentUpon>FrmPM_RepairShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PM\FrmPM_ReportAll.resx">
+      <DependentUpon>FrmPM_ReportAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PM\FrmPM_Section.resx">
+      <DependentUpon>FrmPM_Section.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PM\FrmPM_Show_machin.resx">
+      <DependentUpon>FrmPM_Show_machin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PM\FrmPM_SparePart.resx">
+      <DependentUpon>FrmPM_SparePart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_login.resx">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PM\FrmPM_UnitPlace.resx">
+      <DependentUpon>FrmPM_UnitPlace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Anbar\FrmAnbar_GroupKala.resx">
+      <DependentUpon>FrmAnbar_GroupKala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\PM_Print_list_machine.rdlc" />
+    <EmbeddedResource Include="RDLC\PM_Print_shenasname_machine.rdlc" />
+    <EmbeddedResource Include="RDLC\Anbar_Print_Havale.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\FrmSale_Budget.resx">
+      <DependentUpon>FrmSale_Budget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\FrmSale_RepControlHavale.resx">
+      <DependentUpon>FrmSale_RepControlHavale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\FrmSale_RepControlSefaresh.resx">
+      <DependentUpon>FrmSale_RepControlSefaresh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\FrmTender_Data.resx">
+      <DependentUpon>FrmTender_Data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\FrmTender_Raghib.resx">
+      <DependentUpon>FrmTender_Raghib.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\FrmTender_RaghibData.resx">
+      <DependentUpon>FrmTender_RaghibData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\FrmTender_Show.resx">
+      <DependentUpon>FrmTender_Show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Takvin\FrmTakvinBOM.resx">
+      <DependentUpon>FrmTakvinBOM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Takvin\FrmTakvinBomGheteh.resx">
+      <DependentUpon>FrmTakvinBomGheteh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Takvin\FrmTakvinBomSearch.resx">
+      <DependentUpon>FrmTakvinBomSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Takvin\FrmTakvinMostanad.resx">
+      <DependentUpon>FrmTakvinMostanad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Takvin\FrmTakvinSearchTree.resx">
+      <DependentUpon>FrmTakvinSearchTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Takvin\FrmTakvinShowMostanadAll.resx">
+      <DependentUpon>FrmTakvinShowMostanadAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Takvin\FrmTakvinTree.resx">
+      <DependentUpon>FrmTakvinTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Takvin\FrmTakvin_RepMahsoolAll.resx">
+      <DependentUpon>FrmTakvin_RepMahsoolAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Takvin\FrmTakvin_Taeed.resx">
+      <DependentUpon>FrmTakvin_Taeed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tamin\FrmTaminSanadList.resx">
+      <DependentUpon>FrmTaminSanadList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tamin\FrmTaminTafsili2.resx">
+      <DependentUpon>FrmTaminTafsili2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tolid\FrmTolidDailyReport.resx">
+      <DependentUpon>FrmTolidDailyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tolid\FrmTolidRadyabi.resx">
+      <DependentUpon>FrmTolidRadyabi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tolid\FrmTolidShowDailyReport.resx">
+      <DependentUpon>FrmTolidShowDailyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tolid\FrmTolidShowRadyabi.resx">
+      <DependentUpon>FrmTolidShowRadyabi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tolid\FrmTolid_Arayesh.resx">
+      <DependentUpon>FrmTolid_Arayesh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tolid\FrmTolid_Hack.resx">
+      <DependentUpon>FrmTolid_Hack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tolid\FrmTolid_KontorTestH.resx">
+      <DependentUpon>FrmTolid_KontorTestH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tolid\FrmTolid_KontorTestList.resx">
+      <DependentUpon>FrmTolid_KontorTestList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tolid\FrmTolid_MojudiKhat.resx">
+      <DependentUpon>FrmTolid_MojudiKhat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tolid\FrmTolid_SabtDailyReport.resx">
+      <DependentUpon>FrmTolid_SabtDailyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tolid\FrmTolid_ShenaseKalaRep.resx">
+      <DependentUpon>FrmTolid_ShenaseKalaRep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tolid\FrmTolid_Stop.resx">
+      <DependentUpon>FrmTolid_Stop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tolid\FrmTolid_Zayeat.resx">
+      <DependentUpon>FrmTolid_Zayeat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UM\FrmUM_Base.resx">
+      <DependentUpon>FrmUM_Base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UM\FrmUM_PersonelChart.resx">
+      <DependentUpon>FrmUM_PersonelChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UM\FrnUM_Report.resx">
+      <DependentUpon>FrnUM_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="PM\PM_Print_list_machine.rdlc" />
+    <None Include="PM\PM_Print_shenasname_machine.rdlc" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\user.png" />
+    <None Include="pic\logo100.png" />
+    <None Include="pic\logo30.png" />
+    <None Include="pic\password.png" />
+    <None Include="pic\shutdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\Robot_Arm.ico" />
+    <None Include="pic\Excel1.jpg" />
+    <Content Include="pic\mali.gif" />
+    <None Include="pic\loading.GIF" />
+    <None Include="pic\Untitled.gif" />
+    <None Include="pic\36.GIF" />
+    <Content Include="pic\80percent.ico" />
+    <None Include="pic\Hourglass_time_loading_wait_go_delete_add.png" />
+    <None Include="pic\UpLoad.gif" />
+    <None Include="pic\Search.gif" />
+    <None Include="pic\Save.gif" />
+    <None Include="pic\Remove.gif" />
+    <None Include="pic\Refresh.gif" />
+    <None Include="pic\print.gif" />
+    <None Include="pic\Previous.gif" />
+    <None Include="pic\Open.gif" />
+    <None Include="pic\ok.gif" />
+    <None Include="pic\Next.gif" />
+    <None Include="pic\Help.gif" />
+    <None Include="pic\Edit.gif" />
+    <None Include="pic\Download.gif" />
+    <None Include="pic\Cancel.gif" />
+    <None Include="pic\Buy.gif" />
+    <None Include="pic\Attach.gif" />
+    <None Include="pic\ADD.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
